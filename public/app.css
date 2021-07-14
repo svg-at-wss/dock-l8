@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+
+}
+
+p {
+    line-height: 1.7;
+}
+
+article {
+    max-width: 600px;
+    margin: auto;
+}
+
+article ++{
+    margin-top: 2.5rem;
+}
