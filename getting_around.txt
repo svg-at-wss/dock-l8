@@ -1,0 +1,16 @@
+## Navigating development with docker
+
+- Running commands on your laravel container:
+    Our laravel container is named `myl8app`, per the docker-compose file. 
+    Commands can be run by invoking `docker-compose exec myl8app` + the service and the command you wish to run.
+
+    like so:
+
+    `docker-compose exec myl8app php artisan migrate`
+    or
+    `docker-compose exec myl8app composer require spatie/yaml-front-matter`
+
+- Access your database:
+Our database is named `mariadb`, per the docker-compose file. To get on the db, run the following in your terminal:
+
+`docker-compose exec mariadb mysql -uroot -p`
