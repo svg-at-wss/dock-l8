@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<title>My Blog</title>
-<link rel="stylesheet" type="text/css" href="/app.css">
-<body>
-    <?php foreach ($posts as $post) : ?>
-        <article>
-           <?php echo $post; ?>
+@extends('layout')
+
+@section('content')
+    @foreach ($posts as $post)
+        <article class="{{ $loop->even ? 'fuck' : 'shit' }}">
+           <h1>
+               <a href="/posts/{{ $post->id }}">
+                    {!! $post->title !!} 
+               </a>
+           </h1>
+           <p> {{ $post->date }} </p>
+           <p> {{ $post->excerpt }} </p>
+           
         </article>
-    <?php endforeach; ?>
-
-</body>
-
-</html>
+    @endforeach   
+@endsection

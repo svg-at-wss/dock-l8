@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<title>My Blog</title>
-<link rel="stylesheet" type="text/css" href="/app.css">
-<body>
+@extends('layout')
+
+@section('content')
     <article>
-        <?php echo $post; ?>
+        <h1>{!! $post->title !!}</h1>
+           <p>{{ $post->date }}</p>
+           <div>
+               {!! $post->body !!}
+           </div>
 
     </article>
     <a href="/">Go back</a>
-
-</body>
-
-</html>
+    <hr/>
+@endsection
