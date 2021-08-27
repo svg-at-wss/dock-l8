@@ -11,6 +11,7 @@
     `docker-compose exec myl8app composer require spatie/yaml-front-matter`
 
 - Access your database:
+Make sure port is defined in the docker-file: https://stackoverflow.com/questions/54244085/docker-compose-creating-and-connecting-to-mysql-container
 Our database is named `mariadb`, per the docker-compose file. To get on the db, run the following in your terminal:
 
 `docker-compose exec mariadb mysql -uroot -p`
